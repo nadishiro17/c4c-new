@@ -3,20 +3,22 @@ import { PartnerDetails } from './types';
 import './SearchBar.css';
 
 interface SearchBarProps {
-  onSearchResults: (results: PartnerDetails[]) => void;
-  onClearFilters: () => void;
+  onSearchResults: (results: PartnerDetails[]) => void; // Callback to handle search results
+  onClearFilters: () => void; // Callback to clear search filters
 }
 
 function SearchBar({ onSearchResults, onClearFilters }: SearchBarProps) {
-  const [name, setName] = useState('');
-  const [isActive, setIsActive] = useState('');
+  const [name, setName] = useState(''); // State for the name filter
+  const [isActive, setIsActive] = useState(''); // State for the active status filter
 
+  // Handle form submission to search partners
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const query = new URLSearchParams();
     if (name) query.append('name', name);
     if (isActive) query.append('isActive', isActive);
 
+    // Fetch search results from the backend
     fetch(`http://localhost:4000/search?${query.toString()}`, {
       method: 'GET',
     })
