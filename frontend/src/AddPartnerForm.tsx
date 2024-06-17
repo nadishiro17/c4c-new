@@ -3,18 +3,22 @@ import { PartnerDetails } from './types';
 import './AddPartnerForm.css';
 
 interface AddPartnerFormProps {
-  onAddPartner: (partner: PartnerDetails) => void;
-  onClose: () => void;
+  onAddPartner: (partner: PartnerDetails) => void; // Callback to add a new partner
+  onClose: () => void; // Callback to close the form
 }
 
+// Component for the add partner form
 function AddPartnerForm({ onAddPartner, onClose }: AddPartnerFormProps) {
+  // State variables to manage form inputs
   const [name, setName] = useState('');
   const [thumbnailUrl, setThumbnailUrl] = useState('');
   const [description, setDescription] = useState('');
   const [isActive, setIsActive] = useState(false);
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Send POST request to add a new partner
     const newPartner = { name, thumbnailUrl, description, isActive } as PartnerDetails;
     fetch('http://localhost:4000/', {
       method: 'POST',
