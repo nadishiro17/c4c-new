@@ -1,0 +1,66 @@
+.partner-tile {
+    position: relative;
+    width: 450px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    padding: 25px;
+  }
+  
+  .partner-thumbnail {
+    max-width: 330px;
+    max-height: 150px;
+  }
+  
+  .partner-info {
+    font-size: 0.9em;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: darkred;
+  }
+  
+  .edit-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background-color: darkgrey;
+  }
+  
+  .active {
+    color: green;
+  }
+  
+  .inactive {
+    color: darkred;
+  }
+  

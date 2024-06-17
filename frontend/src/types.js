@@ -1,0 +1,2 @@
+export {};
+// was PartnerData interface  
