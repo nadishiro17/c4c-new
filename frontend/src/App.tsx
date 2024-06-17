@@ -1,6 +1,7 @@
 import './App.css'
 import Dashboard from './Dashboard'
 
+// Main application component
 function App() {
   return (
     <>
