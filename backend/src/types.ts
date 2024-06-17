@@ -1,11 +1,4 @@
-// export interface PartnerDetails {
-//     thumbnailUrl: string;
-//     name: string;
-//     description: string;
-// }
-
-// export type PartnerData = Record<string, PartnerDetails>;
-
+// Partner detials interface
 export interface PartnerDetails {
     id: number;
     name: string;
