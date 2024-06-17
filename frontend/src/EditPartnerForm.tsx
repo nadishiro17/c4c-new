@@ -4,17 +4,19 @@ import './EditPartnerForm.css'
 
 
 interface EditPartnerFormProps {
-  partnerData: PartnerDetails;
-  onEdit: (updatedPartner: PartnerDetails) => void;
-  onCancel: () => void;
+  partnerData: PartnerDetails; // Data of the partner to be edited
+  onEdit: (updatedPartner: PartnerDetails) => void; // Callback to handle editing a partner
+  onCancel: () => void; // Callback to handle form cancellation
 }
 
+// Component for the edit partner form
 function EditPartnerForm({ partnerData, onEdit, onCancel }: EditPartnerFormProps) {
   const [name, setName] = useState(partnerData.name);
   const [thumbnailUrl, setThumbnailUrl] = useState(partnerData.thumbnailUrl);
   const [description, setDescription] = useState(partnerData.description);
   const [isActive, setIsActive] = useState(partnerData.isActive);
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const updatedPartner = { ...partnerData, name, thumbnailUrl, description, isActive };
