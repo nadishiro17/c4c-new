@@ -84,4 +84,3 @@ This project is a web application that allows users to manage partners. Users ca
 This project was a valuable learning experience in building a full-stack application. The integration of different technologies and the addition of Docker support helped solidify my understanding of modern web development practices.
 ```
 
-You can now copy and paste this directly into your `README.md` file.
