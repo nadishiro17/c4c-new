@@ -4,11 +4,12 @@ import EditPartnerForm from './EditPartnerForm';
 import './PartnerTile.css'
 
 interface PartnerTileProps {
-  partnerData: PartnerDetails;
-  onDelete: (id: number) => void;
-  onEdit: (updatedPartner: PartnerDetails) => void;
+  partnerData: PartnerDetails; // Data of the partner
+  onDelete: (id: number) => void; // Callback to handle deletion
+  onEdit: (updatedPartner: PartnerDetails) => void; // Callback to handle editing
 }
 
+// Component to display and manage a single partner's data
 function PartnerTile({ partnerData, onDelete, onEdit }: PartnerTileProps) {
   const [isEditing, setIsEditing] = useState(false);
 
