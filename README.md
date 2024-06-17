@@ -1,7 +1,7 @@
 # Partner Management Application
 
 ## High-level Overview
-This project is a web application that allows users to manage partners. Users can add, edit, search, and delete partners. The frontend is built with React, and the backend is built with Node.js and Express, using SQLite for the database.
+This project is a web application that allows users to manage partners of C4C organization. Users can add, edit, search, and delete partners. The frontend is built with React, and the backend is built with Node.js and Express, using SQLite for the database.
 
 ## Features
 - **Add New Partner:** Users can add new partners via a form.
@@ -11,7 +11,7 @@ This project is a web application that allows users to manage partners. Users ca
 ## Design Decisions
 - **Frontend:** Chose React for its component-based architecture and ease of use.
 - **Backend:** Used Express for its simplicity and flexibility in handling HTTP requests.
-- **Database:** SQLite was selected for its simplicity and ease of setup, making it ideal for development and small-scale applications.
+- **Database:** SQLite was selected as a database to store partners.
 - **Docker:** Added Docker support to ensure the application can run in a consistent environment, regardless of where it's deployed.
 
 ## Instructions to Start the Application
@@ -81,8 +81,6 @@ This project is a web application that allows users to manage partners. Users ca
 - **Learning:** I learned how to effectively integrate a frontend and backend, manage state in React, and set up routing and database operations in Express.
 - **Improvements:** If I had more time, I would add more comprehensive error handling, implement user authentication, and improve the UI/UX design.
 - **Challenges:** One of the challenges was ensuring data consistency between the frontend and backend. I solved this by thoroughly testing and debugging the data flow.
-
-### Bonus Features
 - **Docker Integration:** I chose to implement Docker to ensure that the application can run in any environment with minimal setup, which is beneficial for development and deployment consistency.
 
 ## Conclusion
