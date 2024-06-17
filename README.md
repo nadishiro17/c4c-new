@@ -3,6 +3,11 @@
 ## High-level Overview
 This project is a web application that allows users to manage partners. Users can add, edit, search, and delete partners. The frontend is built with React, and the backend is built with Node.js and Express, using SQLite for the database.
 
+## Features
+- **Add New Partner:** Users can add new partners via a form.
+- **Edit Partner:** Users can update the name, description, and status of a partner.
+- **Delete Partner:** Users can delete a partner.
+- **Search and Filter:** Users can search for partners by name and filter by active status.
 ## Design Decisions
 - **Frontend:** Chose React for its component-based architecture and ease of use.
 - **Backend:** Used Express for its simplicity and flexibility in handling HTTP requests.
