@@ -47,7 +47,7 @@ This project is a web application that allows users to manage partners. Users ca
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone (https://github.com/nadishiro17/c4c-new)
    cd <repository-name>
    ```
 
@@ -82,5 +82,3 @@ This project is a web application that allows users to manage partners. Users ca
 
 ## Conclusion
 This project was a valuable learning experience in building a full-stack application. The integration of different technologies and the addition of Docker support helped solidify my understanding of modern web development practices.
-```
-
