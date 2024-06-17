@@ -20,7 +20,7 @@ This project is a web application that allows users to manage partners. Users ca
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone [https://github.com/nadishiro17/c4c-new]
    cd <repository-name>
    ```
 
