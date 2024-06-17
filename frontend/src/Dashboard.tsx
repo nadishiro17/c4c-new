@@ -12,10 +12,12 @@ function Dashboard({}: DashboardProps) {
   const [partners, setPartners] = useState<PartnerDetails[]>([]);
   const [isFormVisible, setIsFormVisible] = useState(false);
 
+  // Fetch partners on component mount
   useEffect(() => {
     fetchPartners();
   }, []);
 
+  // Function to fetch all partners
   const fetchPartners = () => {
     fetch('http://localhost:4000/', {
       method: 'GET',
@@ -27,11 +29,13 @@ function Dashboard({}: DashboardProps) {
       .catch((error) => console.error('Error fetching partners:', error));
   };
 
+  // Handle adding a new partner
   const handleAddPartner = (newPartner: PartnerDetails) => {
     setPartners((prevPartners) => [...prevPartners, newPartner]);
     setIsFormVisible(false);
   };
 
+  // Handle deleting a partner
   const handleDeletePartner = (id: number) => {
     fetch(`http://localhost:4000/${id}`, {
       method: 'DELETE',
@@ -45,6 +49,7 @@ function Dashboard({}: DashboardProps) {
       .catch((error) => console.error('Error deleting partner:', error));
   };
 
+  // Handle editing a partner
   const handleEditPartner = (updatedPartner: PartnerDetails) => {
     setPartners((prevPartners) =>
       prevPartners.map((partner) =>
@@ -53,14 +58,17 @@ function Dashboard({}: DashboardProps) {
     );
   };
 
+  // Handle search results
   const handleSearchResults = (results: PartnerDetails[]) => {
     setPartners(results);
   };
 
+  // Handle clearing search filters
   const handleClearFilters = () => {
     fetchPartners();
   };
 
+  // Toggle the visibility of the add partner form
   const toggleFormVisibility = () => {
     setIsFormVisible((prev) => !prev);
   };
